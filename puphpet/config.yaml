@@ -81,8 +81,62 @@ apache:
         - rewrite
     vhosts:
         FqrAQNIz604e:
-            servername: local.dev
-            docroot: /var/www/local.dev
+            servername: missiontoukraine.app
+            docroot: /var/www/missiontoukraine/app
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        RqePQuUui04e:
+            servername: missiontoukraine.dist
+            docroot: /var/www/missiontoukraine/dist
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        eqePEieQi04e:
+            servername: sociallyseasoned.app
+            docroot: /var/www/sociallyseasoned/app
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+            options:
+                - Indexes
+                - FollowSymLinks
+                - MultiViews
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        3qePEieQipOe:
+            servername: sociallyseasoned.dist
+            docroot: /var/www/sociallyseasoned/dist
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -136,6 +190,8 @@ php:
             - intl
             - mcrypt
             - curl
+            - gd
+            - imagick
         pear: {  }
         pecl:
             - pecl_http
