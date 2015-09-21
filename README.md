@@ -1,16 +1,29 @@
 # Simple LAMP server using Vagrant
 
+This is a simple LAMP stack driven by Vagrant and Virtualbox. Vagrant works best when every site you work on has its own Vagrant setup (so you can configure memory limits, upload limits, etc to be the same as what is on the production server). However, this encourages an approach similar to MAMP (use this Vagrant setup to house all of your PHP projects).
+
 ## Before you install
-[Install Vagrant 1.6.5](https://www.vagrantup.com/download-archive/v1.6.5.html). Newer versions might not work, so use 1.6.5 for now.
+
+You'll need to install a couple pieces of software
+
+- [Install Vagrant 1.6.5](https://www.vagrantup.com/download-archive/v1.6.5.html). Newer versions might not work, so use 1.6.5 for now.
+- [Install Virtualbox 4.3.x](https://www.virtualbox.org/wiki/Download_Old_Builds_4_3). Newer versions might not work, so use 4.3.x for now.
 
 ## Installation
 
-1. Create an empty directory that should house all of your projects `$ mkdir ~/Projects # if available`
-2. Clone repo `$ git clone [repoUrl] ~/Projects/PHP`
-3. Setup the public/ directory for your sites `$ mkdir ~/Projects/PHP/public`
-4. Kickstart your new Vagrant box `$ cd ~/Projects/PHP && vagrant up`
+```sh
+# Create a directory for all of your Vagrant data to live. We'll use ~/Projects for this tutorial
+$ mkdir ~/Projects
 
-You will now have a Vagrant box running at 192.168.55.25
+# Clone this repo into a PHP directory within ~/Projects
+$ git clone [repoUrl] ~/Projects/PHP
+
+# Delete the .git/ directory (we don't want to track your config changes) and create the ~/Projects/PHP/public where your sites will live
+$ rm -rf ~/Projects/PHP/.git/ && mkdir ~/Projects/PHP/public
+
+# Change to the PHP directory and kickstart Vagrant
+$ cd ~/Projects/PHP && vagrant up
+```
 
 ## Setting up a new site
 
