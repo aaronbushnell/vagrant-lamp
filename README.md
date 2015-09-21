@@ -14,7 +14,7 @@ You will now have a Vagrant box running at 192.168.55.25
 
 ## Setting up a new site
 
-1. Open up ~/Projects/puphpet/config.yaml
+1. Open up ~/Projects/PHP/puphpet/config.yaml
 2. Find the `vhosts:` block under `apache` (not `ngnix`).
 3. Copy an entire block that starts with 12-character random ID
 4. Change the ID to another unique 12-character ID
