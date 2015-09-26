@@ -78,3 +78,10 @@ $ vagrant halt
 # Shuts down your Vagrant box (if on) and restarts the box based on new config changes in config.yaml
 $ vagrant reload --provision
 ```
+
+## Versions/Other Info
+- **PHP**: 5.4.35-1
+- **Apache**: 2.4.10
+- **MySQL**: 5.6.21-1
+- **PHP memory_limit**: 512M
+- **PHP upload_max_size**: 2M
