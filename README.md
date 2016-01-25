@@ -6,7 +6,7 @@ This is a simple LAMP stack driven by Vagrant and Virtualbox. Vagrant works best
 
 You'll need to install a couple pieces of software
 
-- [Install Vagrant 1.6.5](https://www.vagrantup.com/download-archive/v1.6.5.html). Newer versions might not work, so use 1.6.5 for now.
+- [Install Vagrant 1.6.5](https://releases.hashicorp.com/vagrant/1.6.5/vagrant_1.6.5.dmg). Newer versions might not work, so use 1.6.5 for now.
 - [Install Virtualbox 4.3.x](https://www.virtualbox.org/wiki/Download_Old_Builds_4_3). Newer versions might not work, so use 4.3.x for now.
 
 ## Installation
